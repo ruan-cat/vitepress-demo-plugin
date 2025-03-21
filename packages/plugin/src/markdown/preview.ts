@@ -250,7 +250,9 @@ export const transformPreview = (
     'vitepress-demo-plugin',
     `{ VitepressDemoBox, VitepressDemoPlaceholder }`
   );
-  injectComponentImportScript(mdFile, 'vitepress-demo-plugin/dist/style.css');
+
+  // 阮喵喵自主fork版本 不提供局部注册的样式 改成全局导入样式。
+  // injectComponentImportScript(mdFile, 'vitepress-demo-plugin/dist/style.css');
   injectComponentImportScript(mdFile, 'vue', '{ ref, onMounted }');
 
   // 注入组件导入语句
